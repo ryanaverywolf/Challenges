@@ -34,6 +34,6 @@ function palindrome(string){
     return true;
 }
 
-palindrome("A man, a plan, a canal; Panama");
+palindrome("a man, a plan, a canal: panama");
 
 
