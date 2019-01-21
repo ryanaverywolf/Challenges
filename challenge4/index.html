@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Challenge 4</title>
+</head>
+<body>
+    <form name="myForm">
+        <fieldset>
+            <h1>Sign Up</h1>
+            <p>Username:</p><input type="text" name="user"></input>
+            <p>Password</p><input type="password" name="pass"></input>
+            <p>Confirm Password</p><input type="password" name="conf"></input>
+            <p><button class="submit">Submit</button></p>
+        </fieldset>
+    </form>
+    <script>
+    function validateForm() {
+        var username = document.forms["myForm"]["user"].value;
+        var password = document.forms["myForm"]["pass"].value;
+        var confirm = document.forms["myForm"]["conf"].value;
+        if (username == "") {
+            alert("Username must be filled out!");
+        } else if (username == "" && password == "") {
+            alert("Username and Password must be filled out!");
+        } else if (username == "" && password == "" && confirm == "") {
+            alert("Username must be filled out and Passwords must match!");
+        } else if (password !== confirm) {
+            alert("Passwords must match!");
+        } else {
+            console.log("Your form has been submitted.")
+        }
+        const submitBtn = document.querySelector("submit");
+        submitBtn.addEventListener("submit", details.target.style = "null");
+    };
+
+
+    </script>
+</body>
+</html>
